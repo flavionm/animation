@@ -109,9 +109,9 @@ Object.assign(MarioAnimation.prototype, {
 			});
 
 		//  upperArmTween.chain( ... ); this allows other related Tween animations occur at the same time
-		torsoTween.yoyo(true).repeat(Infinity).start();
-		limbsTween.yoyo(true).delay(150).repeat(Infinity).start();
-		extremityTween.yoyo(true).delay(150).repeat(Infinity).start();
+		torsoTween.yoyo(true).repeat(1).start();
+		limbsTween.yoyo(true).delay(150).repeat(1).start();
+		extremityTween.yoyo(true).delay(150).repeat(1).start();
 	},
 	animate: function (time) {
 		window.requestAnimationFrame(this.animate.bind(this));

@@ -86,10 +86,10 @@ Object.assign(WaveAnimation.prototype, {
             })
 
         //  upperArmTween.chain( ... ); this allows other related Tween animations occur at the same time
-        handTween.yoyo(true).repeat(Infinity);
-        upperArmTween.chain(handTween).start();
-        headTween.start();
-        otherArmTween.start();
+        handTween.yoyo(true).delay(500).repeatDelay(0).repeat(3).start();
+        upperArmTween.yoyo(true).repeat(1).repeatDelay(1200).start();
+        headTween.yoyo(true).repeat(1).repeatDelay(1600).start();
+        otherArmTween.yoyo(true).repeat(1).repeatDelay(1600).start();
     },
     animate: function (time) {
         window.requestAnimationFrame(this.animate.bind(this));

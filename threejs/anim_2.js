@@ -79,9 +79,9 @@ Object.assign(HappyAnimation.prototype, {
 			});
 
 		//  upperArmTween.chain( ... ); this allows other related Tween animations occur at the same time
-		upperArmsTween.yoyo(true).repeat(Infinity);
-		armsTween.chain(upperArmsTween).start();
-		headTween.yoyo(true).repeat(Infinity).start();
+		upperArmsTween.yoyo(true).delay(400).repeatDelay(0).repeat(3).start();
+		armsTween.yoyo(true).repeatDelay(1600).repeat(1).start();
+		headTween.yoyo(true).repeat(3).start();
 	},
 	animate: function (time) {
 		window.requestAnimationFrame(this.animate.bind(this));
