@@ -104,7 +104,7 @@ function onDocumentKeyDown(event) {
     animations = {
         1: WaveAnimation,
         2: HappyAnimation,
-        3: false,
+        3: MarioAnimation,
     };
 
     // Run selected animation
